@@ -2,9 +2,9 @@
   "apps": [
     {
       "serverURL": "http://localhost:1338/parse",
-      "appId": "hello",
-      "masterKey": "world",
-      "appName": "",
+      "appId": "tokenapp",
+      "masterKey": "likeidactuallyputithere",
+      "appName": "Token App",
       "iconName": "",
       "primaryBackgroundColor": "",
       "secondaryBackgroundColor": ""
