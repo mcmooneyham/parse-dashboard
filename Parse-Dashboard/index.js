@@ -57,6 +57,11 @@ let configUserPassword = program.userPassword || process.env.PARSE_DASHBOARD_USE
 let configSSLKey = program.sslKey || process.env.PARSE_DASHBOARD_SSL_KEY;
 let configSSLCert = program.sslCert || process.env.PARSE_DASHBOARD_SSL_CERT;
 
+let configServerURL_TTC = program.serverURL || process.env.PARSE_DASHBOARD_SERVER_URL_TTC;
+let configMasterKey_TTC = program.masterKey || process.env.PARSE_DASHBOARD_MASTER_KEY_TTC;
+let configAppId_TTC = program.appId || process.env.PARSE_DASHBOARD_APP_ID_TTC;
+let configAppName_TTC = program.appName || process.env.PARSE_DASHBOARD_APP_NAME_TTC;
+
 function handleSIGs(server) {
   const signals = {
     'SIGINT': 2,
@@ -85,6 +90,12 @@ if (!program.config && !process.env.PARSE_DASHBOARD_CONFIG) {
             serverURL: configServerURL,
             masterKey: configMasterKey,
             appName: configAppName,
+          },
+          {
+            appId: configAppId_TTC,
+            serverURL: configServerURL_TTC,
+            masterKey: configMasterKey_TTC,
+            appName: configAppName_TTC,
           },
         ]
       }
